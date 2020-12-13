@@ -48,29 +48,30 @@
 /* Size classes */
 
 .sm {
-  /* background-color: #3636f7; */
-  /* color: white; */
-  box-shadow: none;
   height: 28px;
 }
 
 .md {
-  /* background-color: #3636f7; */
-  /* color: white; */
-  box-shadow: none;
   height: 35px;
 }
 
 .lg {
-  /* background-color: #3636f7; */
-  /* color: white; */
-  box-shadow: none;
   height: 42px;
 }
 
 .sizeClassesWrapper {
   display: flex;
   flex-direction: row;
-  /* align-items: center */
 }
 
+/* disable shadow */
+
+.off {
+  box-shadow: none;
+}
+
+.off:hover {
+  box-shadow: none;
+}
+
+ 

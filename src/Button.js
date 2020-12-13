@@ -5,9 +5,13 @@ class Button extends React.Component {
     render() {
         let buttonClass = ''
         let buttonSizeClass = ''
+        let disableShadow = ''
 
         if (this.props.variant === undefined) {
             buttonClass = 'main-button'
+            if (this.props.disableShadow === "off") {
+                disableShadow = "off"
+            }
         }
         if (this.props.variant === 'outline') {
           buttonClass = 'main-button-outline'
@@ -26,8 +30,9 @@ class Button extends React.Component {
             buttonSizeClass = 'lg'
         }
 
+      
         return (
-            <button  className = {`id-button ${buttonClass} ${buttonSizeClass}`}> Default </button>
+            <button  className = {`id-button ${buttonClass} ${buttonSizeClass} ${disableShadow}`}> Default </button>
         )
     
     }

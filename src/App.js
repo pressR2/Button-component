@@ -11,12 +11,17 @@ class App extends Component {
         <p className = "main-p"> {'<Button variant="outline"/>'} </p>
         <Button 
           variant = "outline"
+          // size = "lg"
         />
         <p className = "main-p"> {'<Button variant="text"/>'} </p>
         <Button 
           variant = "text"
           // size = "lg"
         />
+
+        <p className = "main-p"> {'<Button disableShadow />'} </p>
+        <Button disableShadow ="off"/>
+
         <div className="sizeClassesWrapper">
           <div>
             <p className = "main-p"> {'<Button size="sm" />'} </p>
