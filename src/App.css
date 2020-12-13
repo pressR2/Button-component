@@ -1,24 +1,29 @@
 .id-button {
-  height: 35px;
-  width: 80px;
   border-radius: 5px;
-  margin-left: 10px;
+  margin-left: 13px;
   font-size: 20px;
 }
 
 .main-button {
+  height: 35px;
+  width: 80px;
   border: none;
+  box-shadow: 0px 5px 10px -4px #000000;
 }
 
 .main-button:hover {
   background-color: rgba(209, 201, 201, 0.74);
+  box-shadow: 0px 5px 10px -4px #000000;
 }
 
 .main-p {
   margin-left: 10px;
+  margin-right: 25px;
 }
 
 .main-button-outline {
+  height: 35px;
+  width: 80px;
   background-color: white;
   border: solid 1px blue;
   color: blue;
@@ -29,6 +34,8 @@
 }
 
 .main-button-text {
+  height: 35px;
+  width: 80px;
   background-color: white;
   border: none;
   color: blue;
@@ -37,3 +44,33 @@
 .main-button-text:hover {
   background-color: cornflowerblue;
 }
+
+/* Size classes */
+
+.sm {
+  /* background-color: #3636f7; */
+  /* color: white; */
+  box-shadow: none;
+  height: 28px;
+}
+
+.md {
+  /* background-color: #3636f7; */
+  /* color: white; */
+  box-shadow: none;
+  height: 35px;
+}
+
+.lg {
+  /* background-color: #3636f7; */
+  /* color: white; */
+  box-shadow: none;
+  height: 42px;
+}
+
+.sizeClassesWrapper {
+  display: flex;
+  flex-direction: row;
+  /* align-items: center */
+}
+

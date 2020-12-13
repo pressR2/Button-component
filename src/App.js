@@ -15,7 +15,22 @@ class App extends Component {
         <p className = "main-p"> {'<Button variant="text"/>'} </p>
         <Button 
           variant = "text"
+          // size = "lg"
         />
+        <div className="sizeClassesWrapper">
+          <div>
+            <p className = "main-p"> {'<Button size="sm" />'} </p>
+            <Button size="sm" />
+          </div>
+          <div>
+            <p className = "main-p"> {'<Button size="md" />'} </p>
+            <Button size="md" />
+          </div>
+          <div>
+            <p className = "main-p"> {'<Button size="lg" />'} </p>
+            <Button size="lg" />
+          </div>
+        </div>
       </div>
     );
   }
