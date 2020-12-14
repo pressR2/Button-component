@@ -53,6 +53,26 @@ class App extends Component {
             <Button size="lg" />
           </div>
         </div>
+
+        {/* Variant color */}
+        <div className="color-wrapper">
+          <div>
+            <p className = "button-description"> {'<Button color="default" />'} </p>
+            <Button color="default" />
+          </div>
+          <div>
+            <p className = "button-description"> {'<Button color="primary" />'} </p>
+            <Button color="primary" />
+          </div>
+          <div>
+            <p className = "button-description"> {'<Button color="secondary" />'} </p>
+            <Button color="secondary" />
+          </div>
+          <div>
+            <p className = "button-description"> {'<Button color="danger" />'} </p>
+            <Button color="danger" />
+          </div>
+        </div>
       </div>
     );
   }

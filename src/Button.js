@@ -10,7 +10,7 @@ class Button extends React.Component {
         let buttonWithIconLeft = '';
         let buttonWithIconRight = '';
         let buttonDisable = '';
-        // let disableHover = '';
+        let buttonColor = '';
         let iconInButton = (<div></div>);
 
 
@@ -60,8 +60,22 @@ class Button extends React.Component {
             )
         }
 
+        if (this.props.color === "default") {
+            buttonColor = 'main-button'
+        }
+        if (this.props.color === "primary") {
+            buttonColor = 'primary-color'
+        }
+        if (this.props.color === "secondary") {
+            buttonColor = 'secondary-color'
+        }
+        if (this.props.color === "danger") {
+            buttonColor = 'dragon-color'
+        };
         return (
-            <button  className = {`button ${buttonVariant} ${buttonSize} ${disableShadow} ${buttonWithIconLeft} ${buttonWithIconRight} ${buttonDisable}`}> Default 
+            <button  className = {`button ${buttonVariant} ${buttonSize} ${disableShadow}
+                                 ${buttonWithIconLeft} ${buttonWithIconRight} ${buttonDisable} 
+                                 ${buttonColor}`}> Default 
             {iconInButton}
             </button>
         )
