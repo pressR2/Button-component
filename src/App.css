@@ -30,7 +30,7 @@
 }
 
 .main-button-outline:hover {
-  background-color: rgb(156, 183, 235);
+  background-color: rgb(215, 224, 240);
 }
 
 .main-button-text {
@@ -42,7 +42,7 @@
 }
 
 .main-button-text:hover {
-  background-color: cornflowerblue;
+  background-color: rgb(215, 224, 240);
 }
 
 /* Size classes */
@@ -97,4 +97,15 @@
 
 .icon-btn-left {
   text-align: end;
+}
+
+/* Disable button */
+.disable-button {
+  box-shadow: none;
+  color: dimgray;
+}
+
+.disable-button:hover {
+  box-shadow: none;
+  background-color: unset;
 }

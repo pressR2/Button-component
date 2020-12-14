@@ -4,26 +4,37 @@ import icon from "./add_shopping_cart-24px.svg"
 class Button extends React.Component {
 
     render() {
-        let buttonVariant = ''
-        let buttonSize = ''
-        let disableShadow = ''
-        let buttonWithIconLeft = ''
-        let buttonWithIconRight = ''
-        let iconInButton = (<div></div>)
+        let buttonVariant = '';
+        let buttonSize = '';
+        let disableShadow = '';
+        let buttonWithIconLeft = '';
+        let buttonWithIconRight = '';
+        let buttonDisable = '';
+        // let disableHover = '';
+        let iconInButton = (<div></div>);
 
 
 
         if (this.props.variant === undefined) {
             buttonVariant = 'main-button'
-            if (this.props.disableShadow === "off") {
+            if (this.props.disableShadow === "on") {
                 disableShadow = "shadow-off"
+            }
+            if (this.props.disabledButton === "on") {
+                buttonDisable = "disable-button"
             }
         }
         if (this.props.variant === 'outline') {
-          buttonVariant = 'main-button-outline'
+            buttonVariant = 'main-button-outline'
+            if (this.props.disabledButton === "on") {
+                buttonDisable = "disable-button"
+            }
         }
         if ( this.props.variant === 'text') {
-          buttonVariant = 'main-button-text' 
+            buttonVariant = 'main-button-text'
+            if (this.props.disabledButton === "on") {
+                buttonDisable = "disable-button"
+            }
         }
 
         if (this.props.size === 'sm') {
@@ -50,7 +61,7 @@ class Button extends React.Component {
         }
 
         return (
-            <button  className = {`button ${buttonVariant} ${buttonSize} ${disableShadow} ${buttonWithIconLeft} ${buttonWithIconRight}`}> Default 
+            <button  className = {`button ${buttonVariant} ${buttonSize} ${disableShadow} ${buttonWithIconLeft} ${buttonWithIconRight} ${buttonDisable}`}> Default 
             {iconInButton}
             </button>
         )

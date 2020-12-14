@@ -20,7 +20,11 @@ class App extends Component {
 
         {/* Disable Shadow */}
         <p className = "button-description"> {'<Button disableShadow />'} </p>
-        <Button disableShadow ="off"/>
+        <Button disableShadow ="on"/>
+
+        {/* Disable button */}
+        <p className = "button-description"> {'<Button disabled />'} </p>
+        <Button disabledButton = "on"/>
 
         {/* Variant with Icon */}
         <div className="button-with-icon-wrapper">
