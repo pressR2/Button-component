@@ -7,45 +7,45 @@ class App extends Component {
     return (
       <div className="App">
         {/* Variant button */}
-        <p className = "main-p"> {'<Button />'} </p>
+        <p className = "button-description"> {'<Button />'} </p>
         <Button />
-        <p className = "main-p"> {'<Button variant="outline"/>'} </p>
+        <p className = "button-description"> {'<Button variant="outline"/>'} </p>
         <Button 
           variant = "outline"
         />
-        <p className = "main-p"> {'<Button variant="text"/>'} </p>
+        <p className = "button-description"> {'<Button variant="text"/>'} </p>
         <Button 
           variant = "text"
         />
 
         {/* Disable Shadow */}
-        <p className = "main-p"> {'<Button disableShadow />'} </p>
+        <p className = "button-description"> {'<Button disableShadow />'} </p>
         <Button disableShadow ="off"/>
 
         {/* Variant with Icon */}
-        <div className="buttonWithIconWrapper">
+        <div className="button-with-icon-wrapper">
           <div>
-            <p className = "main-p"> {'<Button startIcon="local_grocery_store" />'} </p>
+            <p className = "button-description"> {'<Button startIcon="local_grocery_store" />'} </p>
             <Button startIcon="local_grocery_store"/>
           </div>
           <div>
-            <p className = "main-p"> {'<Button endIcon="local_grocery_store" />'} </p>
+            <p className = "button-description"> {'<Button endIcon="local_grocery_store" />'} </p>
             <Button endIcon="local_grocery_store" />
           </div>
         </div>
 
         {/* Variant Size */}
-        <div className="sizeClassesWrapper">
+        <div className="size-wrapper">
           <div>
-            <p className = "main-p"> {'<Button size="sm" />'} </p>
+            <p className = "button-description"> {'<Button size="sm" />'} </p>
             <Button size="sm" />
           </div>
           <div>
-            <p className = "main-p"> {'<Button size="md" />'} </p>
+            <p className = "button-description"> {'<Button size="md" />'} </p>
             <Button size="md" />
           </div>
           <div>
-            <p className = "main-p"> {'<Button size="lg" />'} </p>
+            <p className = "button-description"> {'<Button size="lg" />'} </p>
             <Button size="lg" />
           </div>
         </div>
