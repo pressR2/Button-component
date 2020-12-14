@@ -74,4 +74,27 @@
   box-shadow: none;
 }
 
- 
+/* button with icons */
+.buttonWithIconWrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.icon-btn-left,
+.icon-btn-right {
+  width: 120px;
+}
+
+.icon-right {
+  margin-left: 15px;
+  vertical-align: sub;
+}
+
+.icon-left {
+  position: absolute;
+  left: 25px;
+}
+
+.icon-btn-left {
+  text-align: end;
+}

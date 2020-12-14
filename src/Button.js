@@ -1,4 +1,5 @@
 import React from "react";
+import icon from "./add_shopping_cart-24px.svg"
 
 class Button extends React.Component {
 
@@ -6,6 +7,11 @@ class Button extends React.Component {
         let buttonClass = ''
         let buttonSizeClass = ''
         let disableShadow = ''
+        let buttonWithIconLeft = ''
+        let buttonWithIconRight = ''
+        let iconInButton = (<div></div>)
+
+
 
         if (this.props.variant === undefined) {
             buttonClass = 'main-button'
@@ -30,9 +36,23 @@ class Button extends React.Component {
             buttonSizeClass = 'lg'
         }
 
-      
+        if (this.props.startIcon === "local_grocery_store") {
+            buttonWithIconLeft = "icon-btn-left";
+            iconInButton = (
+                <img className = "icon-left" src={icon}></img>
+            )
+        }
+        if (this.props.endIcon === "local_grocery_store") {
+            buttonWithIconRight = "icon-btn-right";
+            iconInButton = (
+                <img className = "icon-right" src={icon}></img>
+            )
+        }
+
         return (
-            <button  className = {`id-button ${buttonClass} ${buttonSizeClass} ${disableShadow}`}> Default </button>
+            <button  className = {`id-button ${buttonClass} ${buttonSizeClass} ${disableShadow} ${buttonWithIconLeft} ${buttonWithIconRight}`}> Default 
+            {iconInButton}
+            </button>
         )
     
     }
