@@ -12,6 +12,9 @@ class App extends Component {
         <p className = "button-description"> {'<Button variant="outline"/>'} </p>
         <Button 
           variant = "outline"
+           color="secondary"
+          // //  size="lg"
+          // disabledButton = "on"
         />
         <p className = "button-description"> {'<Button variant="text"/>'} </p>
         <Button 
@@ -27,10 +30,10 @@ class App extends Component {
         <Button disabledButton = "on"/>
 
         {/* Variant with Icon */}
-        <div className="button-with-icon-wrapper">
+        <div className = "button-with-icon-wrapper">
           <div>
             <p className = "button-description"> {'<Button startIcon="local_grocery_store" />'} </p>
-            <Button startIcon="local_grocery_store"/>
+            <Button startIcon = "local_grocery_store"/>
           </div>
           <div>
             <p className = "button-description"> {'<Button endIcon="local_grocery_store" />'} </p>
@@ -39,7 +42,7 @@ class App extends Component {
         </div>
 
         {/* Variant Size */}
-        <div className="size-wrapper">
+        <div className = "size-wrapper">
           <div>
             <p className = "button-description"> {'<Button size="sm" />'} </p>
             <Button size="sm" />
@@ -55,7 +58,7 @@ class App extends Component {
         </div>
 
         {/* Variant color */}
-        <div className="color-wrapper">
+        <div className = "color-wrapper">
           <div>
             <p className = "button-description"> {'<Button color="default" />'} </p>
             <Button color="default" />
@@ -65,12 +68,42 @@ class App extends Component {
             <Button color="primary" />
           </div>
           <div>
-            <p className = "button-description"> {'<Button color="secondary" />'} </p>
-            <Button color="secondary" />
+            <p className = "button-description"> {'<Button color="secondary" text="Secondary" />'} </p>
+            <Button color="secondary"
+            text="Secondary" />
           </div>
           <div>
-            <p className = "button-description"> {'<Button color="danger" />'} </p>
-            <Button color="danger" />
+            <p className = "button-description"> {'<Button color="danger" text="Danger" />'} </p>
+            <Button color="danger"
+            text="Danger" />
+          </div>
+        </div>
+
+        {/*Focus hover variant*/}
+        <div className = "color-wrapper">
+          <div>
+            <p className = "button-description">{`&:hover, &:focus`}</p>
+            <Button color="default"
+            hoverAndFocus ="hover-focus-defult"/>
+          </div>
+          <div className = "focus-hover-wrapper">
+            <div>
+              <p className = "button-description"></p>
+              <Button color="primary" 
+              hoverAndFocus ="hover-focus-primary" />
+            </div>
+            <div className = "button-hover-focus-secondary">
+              <p className = "button-description"></p>
+              <Button color="secondary"
+              text="Secondary"
+              hoverAndFocus ="hover-focus-secondary" />
+            </div>
+            <div className = "button-hover-focus-red">
+              <p className = "button-description"></p>
+              <Button color="danger"
+              text="Danger"
+              hoverAndFocus ="hover-focus-dragon" />
+            </div>
           </div>
         </div>
       </div>
