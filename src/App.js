@@ -4,36 +4,66 @@ import Button from "./Button"
 
 class App extends Component {
   render () {
+    const buttonLabel = "&:hover, &:focus";
     return (
       <div className="App">
+        <header> BUTTONS </header>
+
         {/* Variant button */}
-        <p className = "button-description"> {'<Button />'} </p>
-        <Button />
-        <p className = "button-description"> {'<Button variant="outline"/>'} </p>
-        <Button 
-          variant = "outline"
-           color="secondary"
-          // //  size="lg"
-          // disabledButton = "on"
-        />
-        <p className = "button-description"> {'<Button variant="text"/>'} </p>
-        <Button 
-          variant = "text"
-        />
+        <div className = "variant-wrapper">
+          <div>
+            <p className = "button-description"> {'<Button />'} </p>
+            <Button />
+            <p className = "button-description"> {'<Button variant="outline" />'} </p>
+            <Button 
+              variant ="outline"
+            />
+            <p className = "button-description"> {'<Button variant="text" />'} </p>
+            <Button 
+              variant ="text"
+            />
+          </div>
+          <div>
+            <p className = "button-description hover-focus-label"> {buttonLabel} </p>
+            <Button 
+            hoverAndFocus ="hover-focus-defult"/>
+            <p className = "button-description hover-focus-label"> {buttonLabel} </p>
+            <Button 
+              variant ="outline"
+              hoverAndFocus ="hover-focus-outline-text"
+            />
+            <p className = "button-description hover-focus-label"> {buttonLabel} </p>
+            <Button 
+              variant ="text"
+              hoverAndFocus ="hover-focus-outline-text"
+            />
+          </div>
+        </div>
 
         {/* Disable Shadow */}
         <p className = "button-description"> {'<Button disableShadow />'} </p>
         <Button disableShadow ="on"/>
 
         {/* Disable button */}
-        <p className = "button-description"> {'<Button disabled />'} </p>
-        <Button disabledButton = "on"/>
+        <div className = "disable-button-wrapper">
+          <div>
+            <p className = "button-description"> {'<Button disabled />'} </p>
+            <Button disabledButton ="on"/>
+          </div>
+          <div>
+            <p className = "button-description"> {'<Button variant="text" disabled />'} </p>
+              <Button 
+                variant ="text"
+                disabledButton ="on"
+              />
+          </div>
+        </div>
 
         {/* Variant with Icon */}
         <div className = "button-with-icon-wrapper">
           <div>
             <p className = "button-description"> {'<Button startIcon="local_grocery_store" />'} </p>
-            <Button startIcon = "local_grocery_store"/>
+            <Button startIcon ="local_grocery_store"/>
           </div>
           <div>
             <p className = "button-description"> {'<Button endIcon="local_grocery_store" />'} </p>
@@ -82,7 +112,7 @@ class App extends Component {
         {/*Focus hover variant*/}
         <div className = "color-wrapper">
           <div>
-            <p className = "button-description">{`&:hover, &:focus`}</p>
+            <p className = "button-description hover-focus-label"> {buttonLabel} </p>
             <Button color="default"
             hoverAndFocus ="hover-focus-defult"/>
           </div>
