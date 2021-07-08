@@ -1,5 +1,9 @@
 import React from "react";
-import icon from "./add_shopping_cart-24px.svg";
+import iconShoppingCart from "./icons/add_shopping_cart-24px.svg";
+import iconBeenhere from "./icons/beenhere_black_24dp.svg";
+import iconEmail from "./icons/email_black_24dp.svg";
+import iconLink from "./icons/link_black_24dp.svg";
+import iconTask from "./icons/task_black_24dp.svg";
 
 class Button extends React.Component {
   render() {
@@ -14,7 +18,7 @@ class Button extends React.Component {
     let iconInButton = <div></div>;
     let buttonText = this.props.text;
     let buttonSizeWithColor = "";
-    let bottonHoverFocus = "";
+    let buttonHoverFocus = "";
 
     if (this.props.text === "Secondary") {
       buttonSizeWithColor = "secondary-color-w";
@@ -50,6 +54,7 @@ class Button extends React.Component {
       }
     }
 
+    /* Varian Size */
     if (this.props.size === "sm") {
       buttonSize = "size-sm";
     }
@@ -60,13 +65,43 @@ class Button extends React.Component {
       buttonSize = "size-lg";
     }
 
+    /* Varian Icon */
+    if (this.props.startIcon  !== undefined) {
+        buttonWithIconLeft = "icon-btn-left";
+    }
+    if (this.props.endIcon !== undefined) {
+        buttonWithIconRight = "icon-btn-right";
+    }
+
     if (this.props.startIcon === "local_grocery_store") {
-      buttonWithIconLeft = "icon-btn-left";
-      iconInButton = <img className="icon-left" src={icon}></img>;
+      iconInButton = <img className = "icon-left" src = {iconShoppingCart}></img>;
     }
     if (this.props.endIcon === "local_grocery_store") {
-      buttonWithIconRight = "icon-btn-right";
-      iconInButton = <img className="icon-right" src={icon}></img>;
+      iconInButton = <img className = "icon-right" src = {iconShoppingCart}></img>;
+    }
+    if (this.props.startIcon === "email") {
+      iconInButton = <img className = "icon-left" src = {iconEmail}></img>;
+    }
+    if (this.props.endIcon === "email") {
+      iconInButton = <img className = "icon-right" src = {iconEmail}></img>;
+    }
+    if (this.props.startIcon === "link") {
+      iconInButton = <img className = "icon-left" src = {iconLink}></img>;
+    }
+    if (this.props.endIcon === "link") {
+      iconInButton = <img className = "icon-right" src = {iconLink}></img>;
+    }
+    if (this.props.startIcon === "task") {
+      iconInButton = <img className = "icon-left" src = {iconTask}></img>;
+    }
+    if (this.props.endIcon === "task") {
+      iconInButton = <img className = "icon-right" src = {iconTask}></img>;
+    }
+    if (this.props.startIcon === "beenhere") {
+      iconInButton = <img className = "icon-left" src = {iconBeenhere}></img>;
+    }
+    if (this.props.endIcon === "beenhere") {
+      iconInButton = <img className = "icon-right" src = {iconBeenhere}></img>;
     }
 
     if (this.props.color === "default") {
@@ -83,25 +118,25 @@ class Button extends React.Component {
     }
 
     if (this.props.hoverAndFocus === "hover-focus-defult") {
-      bottonHoverFocus = "hover-focus-default";
+      buttonHoverFocus = "hover-focus-default";
     }
     if (this.props.hoverAndFocus === "hover-focus-outline-text") {
-      bottonHoverFocus = "hover-focus-outline-text";
+      buttonHoverFocus = "hover-focus-outline-text";
     }
     if (this.props.hoverAndFocus === "hover-focus-primary") {
-      bottonHoverFocus = "hover-focus-primary";
+      buttonHoverFocus = "hover-focus-primary";
     }
     if (this.props.hoverAndFocus === "hover-focus-secondary") {
-      bottonHoverFocus = "hover-focus-secondary";
+      buttonHoverFocus = "hover-focus-secondary";
     }
     if (this.props.hoverAndFocus === "hover-focus-dragon") {
-      bottonHoverFocus = "hover-focus-dragon";
+      buttonHoverFocus = "hover-focus-dragon";
     }
     return (
       <button
         className={`button ${defaultButton} ${buttonVariant} ${buttonSize} ${disableShadow}
                                  ${buttonWithIconLeft} ${buttonWithIconRight} ${buttonDisable} 
-                                 ${buttonColor} ${buttonSizeWithColor} ${bottonHoverFocus}`}
+                                 ${buttonColor} ${buttonSizeWithColor} ${buttonHoverFocus}`}
       >
         {buttonText}
         {iconInButton}
